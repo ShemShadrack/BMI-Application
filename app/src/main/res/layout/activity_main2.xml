@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/YBmi"
+        android:layout_width="218dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="39dp"
+        android:gravity="center"
+        android:text="@string/your_bmi"
+        android:textColor="#E7EEF1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/YResult"
+        app:layout_constraintEnd_toEndOf="@+id/YResult"
+        app:layout_constraintStart_toStartOf="@+id/YResult"
+        app:layout_constraintTop_toBottomOf="@+id/calcBut" />
+
+    <TextView
+        android:id="@+id/YResult"
+        android:layout_width="215dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="118dp"
+        android:gravity="center"
+        android:text="@string/your_result"
+        android:textColor="#E7EEF1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/YBmi" />
+
+    <EditText
+        android:id="@+id/entWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:layout_marginBottom="52dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/enterWeight"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColor="#F8F9FA"
+        android:textColorHint="#F0F2F3"
+        app:layout_constraintBottom_toTopOf="@+id/entHeight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/entHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="69dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/enterHeight"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColor="#EEF0F1"
+        android:textColorHint="#E8EEEF"
+        app:layout_constraintBottom_toTopOf="@+id/calcBut"
+        app:layout_constraintStart_toStartOf="@+id/entWeight"
+        app:layout_constraintTop_toBottomOf="@+id/entWeight" />
+
+    <Button
+        android:id="@+id/calcBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="63dp"
+        android:onClick="calcBmi"
+        android:text="@string/calculate"
+        app:layout_constraintBottom_toTopOf="@+id/YBmi"
+        app:layout_constraintStart_toStartOf="@+id/YBmi"
+        app:layout_constraintTop_toBottomOf="@+id/entHeight" />
+</androidx.constraintlayout.widget.ConstraintLayout>
